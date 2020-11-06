@@ -43,6 +43,8 @@ nav a{
       font-size: larger;
       line-height:45pt;
   }
+nav{
+    text-align: center;
 
   li{
     display: inline;
