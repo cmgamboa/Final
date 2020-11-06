@@ -1,0 +1,139 @@
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+  background-attachment: fixed; /* Parallax effect */     
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  color: black;
+  height: 350px;                /* Parallax effect */
+
+  /*Your Code Here*/
+  background-image: url('../images/turtle.jpg');
+  background-repeat: no-repeat;
+  /*Set background-image to header.jpg */
+
+}
+img{
+  object-fit: cover;
+}
+
+body{
+  background-color: #D3D3D3;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+nav a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none; 
+  }
+  nav a:hover, nav a:focus {
+    color: #606060; 
+    font-size: larger;
+    line-height:6pt;
+  
+  }
+  nav .current{
+      color: #A00000 ;
+      text-decoration:underline;
+      font-size: larger;
+      line-height:45pt;
+  }
+
+  li{
+    display: inline;
+    padding: 20px;
+    background-color: #dddddd;
+  }
+
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  
+
+    position:absolute;
+    top: -40px;
+  }
+  
+
+  .skip a:focus{
+    top:0px;
+  }
+
+  *:focus{
+    border-style: solid;
+    border-width: 2px;
+  }
+
+  .lauren-text-block{
+    background-color: #F0F0F0;
+      
+      padding: 10px;
+      color: #303030 ;
+      align-self: center;
+    
+    }
+    .lauren-image{
+        text-align:center;
+        width:100%;
+        display:block;
+        margin:auto;
+
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      background-color: black;
+      padding: 10px;
+    }
+    .grid-item {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+      range: fixed;
+    }
+    .grid-item:hover{
+      opacity: 0.5;
+      border: 4px solid black;
+    }
+
+    .flex-container{
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .flex-container > div{
+      border: 1px #ccc solid;
+      padding: 10px;
+    }
+    .box-1{
+      flex:1;     
+    }
+    .box-2{
+      flex:1;
+    }
+    .box-3{
+      flex:1;
+    }
+    .box-4{
+      flex:1;
+    }
+    .box-5{
+      flex:1;
+    }
+
+
+
+@media all and (min-width: 800px){
+
+}
