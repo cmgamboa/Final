@@ -26,10 +26,13 @@ body{
   margin: 0;
   padding: 0;
 }
+
+
 nav a{
     color: black;
     font-weight: bold;
-    text-decoration: none; 
+    text-decoration: none;
+
   }
   nav a:hover, nav a:focus {
     color: #606060; 
@@ -42,8 +45,11 @@ nav a{
       text-decoration:underline;
       font-size: larger;
       line-height:45pt;
-}
+  }
+  nav{
+    text-align: center;
 
+  }
 
   li{
     display: inline;
@@ -136,5 +142,8 @@ nav a{
 
 
 @media all and (min-width: 800px){
+  nav{
+    text-align: left;
+  }
 
 }
