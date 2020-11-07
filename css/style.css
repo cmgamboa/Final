@@ -276,5 +276,10 @@ nav a{
     width: 49.99999%;
     margin: 6px 0;
   }
+  @media screen and (prefers-reduced-motion: reduce){
+    #logo{
+      animation-iteration-count: 0 !important;
+    }
+  }
 
 }
