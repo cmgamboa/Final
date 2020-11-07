@@ -1,23 +1,23 @@
+*{
+  margin: 0;
+  padding:0;
+}
 html{
     scroll-behavior: smooth;
 }
 
-header{
-  background-attachment: fixed; /* Parallax effect */     
-  background-position: center;  /* Parallax effect */
-  background-repeat: no-repeat; /* Parallax effect */
-  background-size: cover;       /* Parallax effect */
-  color: black;
-  height: 350px;                /* Parallax effect */
-
-  /*Your Code Here*/
-  background-image: url('../images/turtle.jpg');
-  background-repeat: no-repeat;
-  /*Set background-image to header.jpg */
-
-}
 img{
   object-fit: cover;
+}
+.imgs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.imgs img {
+  display: block;
+  max-width: 100%;
 }
 
 body{
@@ -26,11 +26,15 @@ body{
   margin: 0;
   padding: 0;
 }
+.nav-container nav ul {
+  white-space:nowrap;
+}
 
 
 nav a{
     color: black;
     font-weight: bold;
+    font-size: 15px;
     text-decoration: none;
 
   }
@@ -41,13 +45,14 @@ nav a{
   
   }
   nav .current{
-      color: #A00000 ;
+      color: #8B0000 ;
       text-decoration:underline;
-      font-size: larger;
+      text-transform: uppercase;
       line-height:45pt;
   }
   nav{
     text-align: center;
+    padding: 5px 0;
 
   }
 
@@ -55,6 +60,8 @@ nav a{
     display: inline;
     padding: 20px;
     background-color: #dddddd;
+    border: 1px solid #8B0000;
+    border-radius: 5px;
   }
 
   .skip a{
@@ -79,13 +86,31 @@ nav a{
     border-style: solid;
     border-width: 2px;
   }
+  @keyframes appear {
+    from {opacity: 0;}
+    to {opacity:1;}
+  }
+  .signature-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: 2px solid #8B0000;
+    border-radius: 5px;
+    animation-name: appear;
+    animation-duration: 6s;
+
+  }
 
   .lauren-text-block{
-    background-color: #F0F0F0;
-      
-      padding: 10px;
+    background-color: #FFFFF0;
+      padding: 15px;
       color: #303030 ;
       align-self: center;
+      border: 1px solid #8B0000;
+      border-radius: 5px;
+      font-family: Arial, Helvetica, sans-serif;
+
     
     }
     .lauren-image{
@@ -93,57 +118,163 @@ nav a{
         width:100%;
         display:block;
         margin:auto;
+        padding: 1px;
+        border: 1px solid #8B0000;
+        border-radius: 5px;
 
     }
     .grid-container {
       display: grid;
-      grid-template-columns: auto auto auto;
+      grid-template-columns: auto;
       background-color: black;
       padding: 10px;
     }
-    .grid-item {
-      background-color: rgba(255, 255, 255, 0.8);
-      border: 1px solid rgba(0, 0, 0, 0.8);
+    .grid-item1,.grid-item2,.grid-item3,.grid-item4,.grid-item5,.grid-item6,.grid-item7,.grid-item8,.grid-item9 {
+      border: 1px solid rgba(255, 255, 255, 0.8); 
       padding: 20px;
       font-size: 30px;
       text-align: center;
-      range: fixed;
+      grid-column: 1/ -1;
     }
-    .grid-item:hover{
+    .grid-item1:hover,.grid-item2:hover,.grid-item3:hover,.grid-item4:hover,.grid-item5:hover,.grid-item6:hover,.grid-item7:hover,.grid-item8:hover,.grid-item9:hover {
       opacity: 0.5;
-      border: 4px solid black;
+      border: 6px solid  rgba(255, 255, 255, 0.8);
     }
 
     .flex-container{
       display: flex;
       flex-wrap: wrap;
+      grid-row-gap: 5px;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto auto auto ;
     }
 
     .flex-container > div{
-      border: 1px #ccc solid;
-      padding: 10px;
+      border: 5px black solid;
+      background-color: black;
+      padding: 5px;
+    }
+    .box-1,.box-2,.box-3,.box-4,.box-5,.box-6{
+      grid-template-columns: 1fr;
     }
     .box-1{
-      flex:1;     
-    }
-    .box-2{
-      flex:1;
-    }
-    .box-3{
-      flex:1;
-    }
-    .box-4{
-      flex:1;
-    }
-    .box-5{
-      flex:1;
+      grid-column: 2 / span 1;
+      font-family: Arial, Helvetica, sans-serif; 
+      color: white;    
     }
 
+    .box-4{
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+    }
+    .gallery {
+      position: relative;
+      
+    }
+    .image {
+      opacity: 1;
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: .5s ease;
+      backface-visibility: hidden;
+    }
+    .middle {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%)
+    }
+    .gallery:hover .image {
+      opacity: 0.3;
+    }
+    
+    .gallery:hover .middle {
+      opacity: 1;
+    }
+    .text {
+      background-color: black;
+      color: white;
+      opacity: 0.5;
+      font-size: 16px;
+      padding: 16px 32px;
+    }
+    
+
+    div.gallery {
+      border: 1px solid #ccc;
+    }
+    
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+    
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+    
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    .responsive {
+      padding: 0 6px;
+      float: left;
+      width: 100%;
+    }
+
+
+    .footer{
+      padding: 10px;
+    }
+
+    
 
 
 @media all and (min-width: 800px){
+  header{
+    background-attachment: fixed; /* Parallax effect */     
+    background-position: center;  /* Parallax effect */
+    background-repeat: no-repeat; /* Parallax effect */
+    background-size: cover;       /* Parallax effect */
+    color: black;
+    height: 350px;                /* Parallax effect */
+  
+    /*Your Code Here*/
+    background-image: url('../images/turtle.jpg');
+    background-repeat: no-repeat;
+    /*Set background-image to header.jpg */
+  
+  }
   nav{
     text-align: left;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: black;
+    padding: 10px;
+  }
+  .grid-item1,.grid-item2,.grid-item3,.grid-item4,.grid-item5,.grid-item6 {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+
+
+  }
+    .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
   }
 
 }
