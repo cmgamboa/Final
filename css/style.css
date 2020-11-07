@@ -57,7 +57,8 @@ nav a{
   }
 
   li{
-    display: inline;
+    display: flex;
+    align-items: center;
     padding: 20px;
     background-color: #dddddd;
     border: 1px solid #8B0000;
@@ -237,7 +238,11 @@ nav a{
       padding: 10px;
     }
 
-    
+@media screen and (prefers-reduced-motion: reduce){
+  .signature-image{
+        animation-iteration-count: 0 !important;
+      }
+    }
 
 
 @media all and (min-width: 800px){
@@ -276,10 +281,6 @@ nav a{
     width: 49.99999%;
     margin: 6px 0;
   }
-  @media screen and (prefers-reduced-motion: reduce){
-    #logo{
-      animation-iteration-count: 0 !important;
-    }
-  }
+  
 
 }
