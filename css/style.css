@@ -148,6 +148,7 @@ nav a{
     .flex-container{
       display: flex;
       flex-wrap: wrap;
+      justify-content:flex-start;
       grid-row-gap: 5px;
       grid-template-columns: 1fr;
       grid-template-rows: auto auto auto auto auto auto ;
@@ -160,9 +161,10 @@ nav a{
     }
     .box-1,.box-2,.box-3,.box-4,.box-5,.box-6{
       grid-template-columns: 1fr;
+
     }
     .box-1{
-      grid-column: 2 / span 1;
+      justify-content: flex-end;
       font-family: Arial, Helvetica, sans-serif; 
       color: white;    
     }
