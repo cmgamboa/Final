@@ -2,13 +2,15 @@
 *{
   margin: 0;
   padding:0;
+  box-sizing: border-box;
 }
 html{
     scroll-behavior: smooth;
 }
 
-img{
-  object-fit: cover;
+img {
+  width: 100%;
+  height: auto;
 }
 .imgs {
   display: flex;
@@ -21,52 +23,41 @@ img{
   max-width: 100%;
 }
 
-body{
-  background-color: #D3D3D3;
-  font-size: 18px;
+ul.topnav {
+  list-style-type: none;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  font-family:"Montserrat", sans-serif;
 }
-.nav-container nav ul {
-  white-space:nowrap;
+
+
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 
-nav a{
-    color: black;
-    font-weight: bold;
-    font-size: 15px;
-    text-decoration: none;
-    font-family:"Montserrat", sans-serif;
 
-  }
-  nav a:hover, nav a:focus {
-    color: #606060; 
-    font-size: 16px;
-    
-  
-  }
-  nav .current{
+
+
+ul.topnav li a.current{
       color: #8B0000 ;
       text-decoration:underline;
       text-transform: uppercase;
   }
-  nav{
-    text-align: center;
-    padding: 5px 0;
-
+  ul.topnav li a:hover, nav a:focus {
+    color: #606060; 
+    font-size: 18px;
+    
+  
   }
 
-  li{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    display:inline-block;
-    padding: 5px;
-    background-color: #dddddd;
-    border: 1px solid #8B0000;
-    border-radius: 5px;
-  }
   
 
   .skip a{
@@ -179,6 +170,7 @@ nav a{
       font-family: Arial, Helvetica, sans-serif;
       color: white;
     }
+
     .gallery {
       position: relative;
       
@@ -237,11 +229,13 @@ nav a{
     * {
       box-sizing: border-box;
     }
-    
-    .responsive {
-      padding: 0 6px;
-      float: left;
-      width: 100%;
+
+    .r-container{
+      display:grid;
+      grid-gap:3px;
+      background-color: #2196F3;
+      padding: 10px;
+      grid-column: 1/ -1;
     }
 
 
@@ -272,7 +266,10 @@ nav a{
   
   }
   nav{
-    text-align: left;
+    text-align: right;
+  }
+  ul.topnav li {
+    float: left;
   }
   .grid-container {
     display: grid;
