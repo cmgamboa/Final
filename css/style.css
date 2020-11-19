@@ -12,6 +12,10 @@ img {
   width: 100%;
   height: auto;
 }
+p{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 25px;
+}
 .imgs {
   display: flex;
   flex-direction: column;
@@ -106,9 +110,20 @@ ul.topnav li a.current{
       border: 1px solid #8B0000;
       border-radius: 5px;
       font-family: Arial, Helvetica, sans-serif;
+      margin:20px;
 
     
     }
+    h1{
+      font-family:"Montserrat", sans-serif;
+      text-align: center;
+      padding: 30px;
+      text-decoration: underline;
+    }
+    body{
+      background-color:#D3D3D3 ;
+    }
+
     .lauren-image{
         text-align:center;
         width:100%;
@@ -145,15 +160,22 @@ ul.topnav li a.current{
       grid-template-columns: 1fr;
       grid-template-rows: auto;
       align-items: center;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      border: 4px solid black;
+      padding: 1px;
     }
     div.container section div{
       flex:1;
     }
 
     .flex-container > div{
-      border: 5px black solid;
-      background-color: black;
+
+      background-color:	#383838;
       padding: 5px;
+    }
+    .flex-container{
+      padding: 10px;
     }
     .box-1,.box-2,.box-3,.box-4,.box-5,.box-6{
       grid-template-columns: 1fr;
@@ -163,7 +185,7 @@ ul.topnav li a.current{
       justify-content: flex-end;
       font-family: Arial, Helvetica, sans-serif; 
       color: white; 
-        
+      text-decoration: underline #383838;
     }
 
     .box-4{
@@ -233,7 +255,7 @@ ul.topnav li a.current{
     .r-container{
       display:grid;
       grid-gap:3px;
-      background-color: #2196F3;
+      background-color: black;
       padding: 10px;
       grid-column: 1/ -1;
     }
