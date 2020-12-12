@@ -7,6 +7,13 @@
 html{
     scroll-behavior: smooth;
 }
+.tex{
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: #333;
+  margin: 30px;
+  padding: 5px;
+}
 .lauren-image-back p{
   font-family: Arial, Helvetica, sans-serif;
   color: #303030 ;
@@ -97,7 +104,7 @@ ul.topnav li a.current{
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-    border: 2px solid #8B0000;
+    border: 2px solid #1E90FF;
     border-radius: 5px;
     animation-name: appear;
     animation-duration: 6s;
@@ -109,7 +116,7 @@ ul.topnav li a.current{
       padding: 15px;
       color: #303030 ;
       align-self: center;
-      border: 1px solid #8B0000;
+      border: 1px solid #1E90FF;
       border-radius: 5px;
       font-family: Arial, Helvetica, sans-serif;
       margin:20px;
@@ -317,6 +324,42 @@ ul.topnav li a.current{
   .signature-image{
         animation-iteration-count: 0 !important;
       }
+      .grid-item1:hover,.grid-item2:hover,.grid-item3:hover,.grid-item4:hover,.grid-item5:hover,.grid-item6:hover,.grid-item7:hover,.grid-item8:hover,.grid-item9:hover {
+        opacity: none;
+        border: none;
+      }
+      .image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+      }
+      .middle {
+        transition: none;
+        opacity: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%)
+      }
+      .gallery:hover .image {
+        opacity: 0.3;
+      }
+      
+      .gallery:hover .middle {
+        opacity: 1;
+      }
+      .text {
+        background-color: black;
+        color: white;
+        opacity: 0;
+        font-size: 16px;
+        padding: 16px 32px;
+      }
+  
     }
 
 @media all and (min-width: 600px){
@@ -363,7 +406,7 @@ ul.topnav li a.current{
 }
 
 .lauren-image{
-  border: 2px solid #8B0000;
+  border: 2px solid #1E90FF;
   width: 40%;
   height: auto;
 }
@@ -604,10 +647,24 @@ ul.topnav li a.current{
   .flex-container{
     min-height: 600px;
     flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: row;
     align-content:stretch;
-  }
 
+    margin-right: 150px;
+    margin-left: 150px;
+
+  }
+  .box-2,.box-3{
+    flex:50%;
+    border: 2px solid #1E90FF; 
+  }
+  .box-5{
+    border: 2px solid #1E90FF;
+
+  }
+  .box-6,.box-7,.box-8,.box-9{
+    border: 2px solid #1E90FF; 
+  }
 
     .responsive {
     width: 49.99999%;
