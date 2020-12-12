@@ -325,7 +325,7 @@ ul.topnav li a.current{
         animation-iteration-count: 0 !important;
       }
       .grid-item1:hover,.grid-item2:hover,.grid-item3:hover,.grid-item4:hover,.grid-item5:hover,.grid-item6:hover,.grid-item7:hover,.grid-item8:hover,.grid-item9:hover {
-        opacity: none;
+        opacity: 1;
         border: none;
       }
       .image {
