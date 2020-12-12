@@ -346,7 +346,7 @@ ul.topnav li a.current{
         -ms-transform: translate(-50%, -50%)
       }
       .gallery:hover .image {
-        opacity: 0.3;
+        opacity: 1;
       }
       
       .gallery:hover .middle {
